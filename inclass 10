@@ -1,0 +1,24 @@
+#include "employee.h"
+using std:: string;
+
+class Contractor: public Employee{
+  public:
+    Contractor (const strings& theName, const strings& theSSN, double LumpSum, int miles);
+    void setMiles (int& m){ milesDriven = m; }
+    int getMiles () {return milesDriven; }
+void setMilesReimbursmentRate(float& m) {MilesReimbursmentrate = m; }
+int getMilesReimbursmentRate() { return MilesReimbursmentrate; }
+void printCheck();
+void print() const;
+private:
+int milesDriven;
+float milesReimbursementRate;
+};
+
+#endif
+
+Contractor:: Contractor(): Employee("Matt Damon", "1234321"), milesDriven(42), milesReinburmentsRate(.67){
+setNetpay(3000);
+}
+Contractor:: Contractor (const string& theName, const string& theSSN, double LumpSum, int miles): Employee(theName, theSSN)' milesDriven(miles), milesReimbursmentRate(.67){
+setNetPay(LumpSum)
